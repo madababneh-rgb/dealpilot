@@ -1,1 +1,34 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const results = document.getElementById("results");
 
+  if (!results) return;
+
+  results.innerHTML = `
+    <div style="max-width:900px;margin:20px auto;padding:24px;border-radius:16px;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.10);">
+      <div style="font-size:13px;font-weight:bold;color:#777;margin-bottom:8px;">
+        DEALPILOT PICK
+      </div>
+
+      <h2 style="margin:0 0 10px;">
+        Etekcity Digital Kitchen Scale
+      </h2>
+
+      <p style="margin:0 0 18px;color:#555;">
+        A useful and affordable kitchen gadget for cooking, baking and meal preparation.
+      </p>
+
+      <a
+        href="https://amzn.to/4hIBHVh"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        style="display:inline-block;padding:14px 22px;border-radius:10px;background:#ff9900;color:#111;text-decoration:none;font-weight:bold;"
+      >
+        Check Price on Amazon →
+      </a>
+
+      <p style="font-size:12px;color:#777;margin-top:18px;">
+        As an Amazon Associate I earn from qualifying purchases.
+      </p>
+    </div>
+  `;
+});
