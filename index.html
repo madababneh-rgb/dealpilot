@@ -1,69 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DealPilot — Find better deals</title>
-<meta name="description" content="Tell DealPilot what you want and your budget. Discover products and deals worth checking out.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DealPilot helps you find smarter shopping ideas, useful buying guides, and deals worth comparing.">
+<title>DealPilot — Smart Shopping, Less Searching</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+.guides-section{padding:28px 0 10px}.guides-heading{text-align:center;margin-bottom:18px}.guides-heading h2{margin-bottom:6px}.guides-heading p{margin:0 auto;max-width:680px;opacity:.82}.guides-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.guide-card{display:flex;flex-direction:column;padding:18px;border-radius:18px;text-decoration:none;color:inherit;border:1px solid rgba(0,0,0,.08);background:rgba(255,255,255,.9);box-shadow:0 8px 24px rgba(0,0,0,.06);transition:transform .15s ease,box-shadow .15s ease}.guide-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.09)}.guide-icon{font-size:1.65rem;margin-bottom:8px}.guide-card h3{margin:0 0 7px;font-size:1.05rem}.guide-card p{margin:0 0 14px;line-height:1.45;opacity:.82;font-size:.94rem}.guide-link{margin-top:auto;font-weight:700}.affiliate-note{text-align:center;font-size:.82rem;opacity:.7;margin:22px auto 0;max-width:760px;line-height:1.5}@media(max-width:640px){.guides-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-<header class="nav">
-  <div class="brand">✈️ DealPilot</div>
-  <a href="#how">How it works</a>
-</header>
-
+<header class="site-header"><div class="container"><div class="brand">✈️ DealPilot</div></div></header>
 <main>
-<section class="hero">
-  <div class="badge">SMART SHOPPING • LESS SEARCHING</div>
-  <h1>Tell us what you want.<br><span>We’ll help find the deals.</span></h1>
-  <p>Describe what you're shopping for, set a budget, and get a simple shortlist to explore.</p>
-  <form id="searchForm" class="searchbox">
-    <input id="query" placeholder="e.g. cordless drill under $150" autocomplete="off">
-    <button>Find My Deals →</button>
-  </form>
-  <div class="chips">
-    <button data-q="Best gift for my wife under $75">🎁 Gifts</button>
-    <button data-q="Best cordless drill under $150">🔧 Tools</button>
-    <button data-q="Best truck accessories under $100">🚚 Truck</button>
-    <button data-q="Best headphones under $100">🎧 Tech</button>
-  </div>
-</section>
-
-<section id="results" class="results hidden">
-  <div class="sectionhead">
-    <div><div class="eyebrow">YOUR SEARCH</div><h2 id="resultTitle"></h2></div>
-    <span class="note">Example results — add affiliate feeds before launch.</span>
-  </div>
-  <div id="cards" class="cards"></div>
-</section>
-
-<section class="deals">
-  <div class="sectionhead"><div><div class="eyebrow">START HERE</div><h2>Popular searches</h2></div></div>
-  <div class="tiles">
-    <button data-q="Best Christmas gifts under $50">🎄 <b>Gifts under $50</b><small>Easy wins</small></button>
-    <button data-q="Best home tools under $100">🏠 <b>Home upgrades</b><small>Useful finds</small></button>
-    <button data-q="Best car accessories under $75">🚗 <b>Car accessories</b><small>Popular picks</small></button>
-  </div>
-</section>
-
-<section id="how" class="how">
-  <div><div class="eyebrow">HOW IT WORKS</div><h2>Three simple steps.</h2></div>
-  <div class="steps">
-    <div><strong>01</strong><h3>Tell us</h3><p>Describe the item, gift or idea you're looking for.</p></div>
-    <div><strong>02</strong><h3>Compare</h3><p>Build a shortlist around your budget and preferences.</p></div>
-    <div><strong>03</strong><h3>Shop</h3><p>Click through to retailers and complete your purchase there.</p></div>
-  </div>
-</section>
-
-<section class="signup">
-  <div><div class="eyebrow">COMING SOON</div><h2>Deal alerts.</h2><p>Collect emails for price drops and new deals.</p></div>
-  <form id="emailForm"><input type="email" required placeholder="you@example.com"><button>Join the list</button></form>
-  <div id="emailMsg"></div>
-</section>
-</main>
-
-<footer>© 2026 DealPilot · Affiliate disclosure: DealPilot may earn a commission from qualifying purchases.</footer>
-<script src="app.js"></script>
-</body>
-</html>
+<section class="hero"><div class="container"><p class="eyebrow">SMART SHOPPING • LESS SEARCHING</p><h1>Tell us what you want.<br>We’ll help find the deals.</h1><form id="searchForm" class="search-box"><input id="searchInput" type="text" placeholder="e.g. cordless drill under $150" aria-label="What are you shopping for?" autocomplete="off"><button type="submit">Find My Deals →</button></form><div class="categories" aria-label="Popular categories"><button type="button" class="category-chip" data-q="gifts">🎁 Gifts</button><button type="button" class="category-chip" data-q="tools">🔧 Tools</button><button type="button" class="category-chip" data-q="truck accessories">🚚 Truck</button><button type="button" class="category-chip" data-q="tech">🎧 Tech</button></div></div></section>
+<section id="results" class="results-section"><div class="container"><h2>Popular searches</h2><div class="results-grid"><article class="deal-card"><div class="deal-icon">🔧</div><h3>Top value pick</h3><p>Reliable everyday option worth comparing.</p><strong>$79</strong><button type="button" onclick="demoClick()">Check deal</button></article><article class="deal-card"><div class="deal-icon">⭐</div><h3>Best reviewed</h3><p>Strong balance of price and useful features.</p><strong>$99</strong><button type="button" onclick="demoClick()">Check deal</button></article><article class="deal-card"><div class="deal-icon">💰</div><h3>Budget pick</h3><p>A lower-cost option worth putting on your list.</p><strong>$59</strong><button type="button" onclick="demoClick()">Check deal</button></article></div></div></section>
+<section class="how-it-works"><div class="container"><h2>How it works</h2><div class="steps"><div class="step"><span>1</span><h3>Tell us what you need</h3><p>Search by product, category, budget, or use.</p></div><div class="step"><span>2</span><h3>Compare smartly</h3><p>Use practical buying tips to narrow your choices.</p></div><div class="step"><span>3</span><h3>Buy with confidence</h3><p>Check price, reviews, fit, features, and return policies.</p></div></div></div></section>
+<section class="guides-section"><div class="container"><div class="guides-heading"><p class="eyebrow">DEALPILOT SHOPPING GUIDES</p><h2>Shop smarter before you buy</h2><p>Quick, practical guides to help you compare products, avoid false savings, and get more value from your budget.</p></div><div class="guides-grid">
+<a class="guide-card" href="best-gifts-under-50.html"><div class="guide-icon">🎁</div><h3>Best Gifts Under $50</h3><p>Simple ways to find useful gifts without wasting money.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="best-home-gadgets.html"><div class="guide-icon">🏠</div><h3>Best Home Gadgets</h3><p>What to check before buying kitchen, cleaning, and home helpers.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="best-tech-under-100.html"><div class="guide-icon">🎧</div><h3>Best Tech Under $100</h3><p>A practical checklist for chargers, audio, computer gear, and smart home tech.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="best-tools-under-100.html"><div class="guide-icon">🔧</div><h3>Best Tools Under $100</h3><p>Compare the features that matter before choosing a tool.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="best-truck-accessories.html"><div class="guide-icon">🚚</div><h3>Best Truck Accessories</h3><p>Fitment, organization, protection, lighting, and compatibility checks.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="budget-shopping-guide.html"><div class="guide-icon">💰</div><h3>Budget Shopping Guide</h3><p>How to avoid false savings and make a limited budget go further.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="gifts-for-dad.html"><div class="guide-icon">👨</div><h3>Gifts for Dad</h3><p>Ideas for the garage, truck, outdoors, tech, and everyday interests.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="how-to-find-real-deals.html"><div class="guide-icon">🔎</div><h3>How to Find Real Deals</h3><p>Compare normal prices, total cost, reviews, and return policies.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="product-comparison-checklist.html"><div class="guide-icon">✅</div><h3>Product Comparison Checklist</h3><p>Ten questions that make side-by-side shopping much easier.</p><span class="guide-link">Read guide →</span></a>
+<a class="guide-card" href="work-gear-buying-guide.html"><div class="guide-icon">🦺</div><h3>Work Gear Buying Guide</h3><p>Compare durability, comfort, storage, lighting, and everyday use.</p><span class="guide-link">Read guide →</span></a>
+</div><p class="affiliate-note">Disclosure: DealPilot may earn a commission when you purchase through qualifying links. This does not change the price you pay.</p></div></section>
+<section class="signup"><div class="container"><h2>Want better deals in your inbox?</h2><p>Get occasional shopping ideas and deal-finding tips.</p><form id="emailForm"><input type="email" placeholder="Your email address" aria-label="Email address" required><button type="submit">Join DealPilot</button></form></div></section>
+</main><footer><div class="container"><p>© 2026 DealPilot • Smart shopping, less searching.</p></div></footer><script src="app.js"></script>
+</body></html>
