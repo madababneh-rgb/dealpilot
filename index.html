@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DealPilot — Find better deals</title>
+<meta name="description" content="Tell DealPilot what you want and your budget. Discover products and deals worth checking out.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="brand">✈️ DealPilot</div>
+  <a href="#how">How it works</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="badge">SMART SHOPPING • LESS SEARCHING</div>
+  <h1>Tell us what you want.<br><span>We’ll help find the deals.</span></h1>
+  <p>Describe what you're shopping for, set a budget, and get a simple shortlist to explore.</p>
+  <form id="searchForm" class="searchbox">
+    <input id="query" placeholder="e.g. cordless drill under $150" autocomplete="off">
+    <button>Find My Deals →</button>
+  </form>
+  <div class="chips">
+    <button data-q="Best gift for my wife under $75">🎁 Gifts</button>
+    <button data-q="Best cordless drill under $150">🔧 Tools</button>
+    <button data-q="Best truck accessories under $100">🚚 Truck</button>
+    <button data-q="Best headphones under $100">🎧 Tech</button>
+  </div>
+</section>
+
+<section id="results" class="results hidden">
+  <div class="sectionhead">
+    <div><div class="eyebrow">YOUR SEARCH</div><h2 id="resultTitle"></h2></div>
+    <span class="note">Example results — add affiliate feeds before launch.</span>
+  </div>
+  <div id="cards" class="cards"></div>
+</section>
+
+<section class="deals">
+  <div class="sectionhead"><div><div class="eyebrow">START HERE</div><h2>Popular searches</h2></div></div>
+  <div class="tiles">
+    <button data-q="Best Christmas gifts under $50">🎄 <b>Gifts under $50</b><small>Easy wins</small></button>
+    <button data-q="Best home tools under $100">🏠 <b>Home upgrades</b><small>Useful finds</small></button>
+    <button data-q="Best car accessories under $75">🚗 <b>Car accessories</b><small>Popular picks</small></button>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div><div class="eyebrow">HOW IT WORKS</div><h2>Three simple steps.</h2></div>
+  <div class="steps">
+    <div><strong>01</strong><h3>Tell us</h3><p>Describe the item, gift or idea you're looking for.</p></div>
+    <div><strong>02</strong><h3>Compare</h3><p>Build a shortlist around your budget and preferences.</p></div>
+    <div><strong>03</strong><h3>Shop</h3><p>Click through to retailers and complete your purchase there.</p></div>
+  </div>
+</section>
+
+<section class="signup">
+  <div><div class="eyebrow">COMING SOON</div><h2>Deal alerts.</h2><p>Collect emails for price drops and new deals.</p></div>
+  <form id="emailForm"><input type="email" required placeholder="you@example.com"><button>Join the list</button></form>
+  <div id="emailMsg"></div>
+</section>
+</main>
+
+<footer>© 2026 DealPilot · Affiliate disclosure: DealPilot may earn a commission from qualifying purchases.</footer>
+<script src="app.js"></script>
+</body>
+</html>
